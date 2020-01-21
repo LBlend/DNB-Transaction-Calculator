@@ -5,24 +5,38 @@ from datetime import datetime
 
 def main():
     sortword = input('Type the word that you want to sort the data by\n')
+    income_or_expenses = received_or_paid()
     print_transactions = enter_transactions()
-    calculate(sortword, print_transactions)
+    calculate(sortword, income_or_expenses, print_transactions)
+
+
+def received_or_paid():
+    """Choose betweeen calculating income or expenses"""
+
+    user_input = input('\n\nCalculate income or expenses?\ntype "i" for income / type "e" expenses\n')
+    if user_input.lower() == 'i':
+        return 4
+    elif user_input.lower() == 'e':
+        return 3
+    else:
+        print('\nINVALID INPUT\n\n')
+        return received_or_paid()
 
 
 def enter_transactions():
     """Gives the user the option to print transaction details"""
 
-    transcations = input('\n\nPrint all transactions?\ny/n\n')
-    if transcations.lower() == 'n':
+    user_input = input('\n\nPrint all transactions?\ntype "y" for yes / type "n" for no\n')
+    if user_input.lower() == 'n':
         return False
-    elif transcations.lower() == 'y':
+    elif user_input.lower() == 'y':
         return True
     else:
         print('\nINVALID INPUT\n\n')
         return enter_transactions()
 
 
-def calculate(sortword: str, print_transactions: bool):
+def calculate(sortword: str, income_or_expenses: int, print_transactions: bool):
     """Calculates the total amount"""
 
     total = 0
@@ -36,7 +50,7 @@ def calculate(sortword: str, print_transactions: bool):
         for row in range(excel_sheet.nrows):
             date = excel_sheet.cell_value(row, 0)
             name = excel_sheet.cell_value(row, 1)
-            amount = excel_sheet.cell_value(row, 3)
+            amount = excel_sheet.cell_value(row, income_or_expenses)
             if sortword.lower() not in name.lower() or amount == '':
                 continue
             if print_transactions is True:
