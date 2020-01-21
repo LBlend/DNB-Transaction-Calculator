@@ -24,6 +24,7 @@ A simple script that sorts your transactions by keyword and calculates the total
 5. Download your transaction data
    
    ![1](https://i.imgur.com/XUQ1ZPE.png)
+
    ![2](https://i.imgur.com/jTx2TgD.png)
 
 6. Put the `.xls` files that you've downloaded into the `input` folder
@@ -34,12 +35,6 @@ A simple script that sorts your transactions by keyword and calculates the total
 
     `python calculator.py`
 
-## To-do list
-A list of features I want to add (*If I ever feel like expanding the functionality of this script*):
- - [ ] GUI
- - [ ] Support multiple banks
- - [ ] Multi-language support
- - [ ] Adding multiple sorting options
 
 ## Why does this exist?
 I wanted to figure out how much money I'd spent on parking. I found it pretty tedious to enter all of my transactions manually into a calculator so I wrote a really simple script to do it for me. I figured I might aswell publish it because... why not? ¯\\\_(ツ)\_/¯
