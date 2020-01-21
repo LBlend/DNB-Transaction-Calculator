@@ -28,7 +28,7 @@ def calculate(sortword: str, print_transactions: bool):
     total = 0
 
     if print_transactions is True:
-        print('\nDate | Transaction | Cost')
+        print('\nDate | Transaction | Amount')
 
     for i in listdir('input'):
         excel_file = xlrd.open_workbook(filename=f'input/{i}')
@@ -36,14 +36,14 @@ def calculate(sortword: str, print_transactions: bool):
         for row in range(excel_sheet.nrows):
             date = excel_sheet.cell_value(row, 0)
             name = excel_sheet.cell_value(row, 1)
-            cost = excel_sheet.cell_value(row, 3)
-            if sortword.lower() not in name.lower():
+            amount = excel_sheet.cell_value(row, 3)
+            if sortword.lower() not in name.lower() or amount == '':
                 continue
             if print_transactions is True:
                 date = datetime(*xlrd.xldate_as_tuple(date, excel_file.datemode)).strftime('%B %d %Y')
-                print(f'{date} | {name} | {cost}')
+                print(f'{date} | {name} | {amount}')
 
-            total += cost
+            total += amount
 
     print(f'\n\nTOTAL: {round(total, 2)}')
 
