@@ -1,6 +1,8 @@
 # DNB Transaction Calculator
 A simple script that sorts your transactions by keyword and calculates the total amount. This makes you able to calculate how much you've spent in/on a specific store/service.
 
+![1](https://i.imgur.com/mJ6v02B.gif)
+
 ## Usage
 
 1. Clone the repo
@@ -40,7 +42,7 @@ A list of features I want to add (*If I ever feel like expanding the functionali
  - [ ] Adding multiple sorting options
 
 ## Why does this exist?
-I wanted to figure out how much money I'd spent on parking. I found it pretty tedious to enter all of my transactions manually into a calculator so I wrote a really simple script to do it for me. I figured I might aswell publish it because... why not? ¯\\_(ツ)_/¯
+I wanted to figure out how much money I'd spent on parking. I found it pretty tedious to enter all of my transactions manually into a calculator so I wrote a really simple script to do it for me. I figured I might aswell publish it because... why not? ¯\\\_(ツ)\_/¯
 
 ## Lisence
 This project is licensed under the MIT License - Please read [LICENSE](LICENSE) for details.
