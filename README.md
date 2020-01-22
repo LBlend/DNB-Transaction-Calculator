@@ -3,12 +3,14 @@ A simple script that sorts your transactions by keyword and calculates the total
 
 <details>
   <summary>Screenshots/GIFs</summary>
-    
+   
    <img src="https://i.imgur.com/QVeFQK2.gif">
    
    <img src="https://i.imgur.com/NdrKFvL.gif">
    
    <img src="https://i.imgur.com/rZgT7N4.png">
+   
+   <img src="https://i.imgur.com/1B8mHSV.png">
 
 </details>
 
