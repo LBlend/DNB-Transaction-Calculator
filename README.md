@@ -1,7 +1,16 @@
 # DNB Transaction Calculator
 A simple script that sorts your transactions by keyword and calculates the total amount. This makes you able to calculate how much you've spent in/on a specific store/service.
 
-![1](https://i.imgur.com/mJ6v02B.gif)
+<details>
+  <summary>Screenshots/GIFs</summary>
+    
+   <img src="https://i.imgur.com/QVeFQK2.gif">
+   
+   <img src="https://i.imgur.com/NdrKFvL.gif">
+   
+   <img src="https://i.imgur.com/rZgT7N4.png">
+
+</details>
 
 ## Usage
 
