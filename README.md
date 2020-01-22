@@ -33,6 +33,8 @@ A simple script that sorts your transactions by keyword and calculates the total
 5. Download your transaction data
    
    ![1](https://i.imgur.com/XUQ1ZPE.png)
+   
+   #
 
    ![2](https://i.imgur.com/jTx2TgD.png)
 
