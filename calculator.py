@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 def main():
-    sortword = input('Type the word that you want to sort the data by\n')
+    sortword = input('Type the word that you want to sort the data by\nType "!TOTAL" to calculate the sum of all transactions, regardless of keyword\n')
     income_or_expenses = received_or_paid()
     print_transactions = enter_transactions()
     calculate(sortword, income_or_expenses, print_transactions)
@@ -53,7 +53,7 @@ def calculate(sortword: str, income_or_expenses: int, print_transactions: bool):
             date = excel_sheet.cell_value(row, 0)
             name = excel_sheet.cell_value(row, 1)
             amount = excel_sheet.cell_value(row, income_or_expenses)
-            if sortword.lower() not in name.lower() or amount == '':
+            if sortword != '!TOTAL' and sortword.lower() not in name.lower() or amount == '':
                 continue
             if print_transactions is True:
                 date = datetime(*xlrd.xldate_as_tuple(date, excel_file.datemode)).strftime('%B %d %Y')
