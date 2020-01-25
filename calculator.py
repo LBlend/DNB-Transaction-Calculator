@@ -48,6 +48,8 @@ def calculate(sortword: str, income_or_expenses: int, print_transactions: bool):
         excel_file = xlrd.open_workbook(filename=f'input/{i}')
         excel_sheet = excel_file.sheet_by_index(0)
         for row in range(excel_sheet.nrows):
+            if row == 0:
+                continue
             date = excel_sheet.cell_value(row, 0)
             name = excel_sheet.cell_value(row, 1)
             amount = excel_sheet.cell_value(row, income_or_expenses)
